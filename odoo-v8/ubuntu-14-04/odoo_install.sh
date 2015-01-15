@@ -68,6 +68,21 @@ sudo mkdir /var/log/$OE_USER
 sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 
 #--------------------------------------------------
+# Install Dependencies / Themes Bootstrap
+#--------------------------------------------------
+
+echo -e "\n---- INSTALL NPM ----"
+sudo apt-get install npm
+echo -e "\n---- INSTALL NODEJS ----"
+sudo apt-get install nodejs
+echo -e "\n---- INSTALL LESS-PLUGIN-CLEAN-CSS ----"
+sudo npm install -g less less-plugin-clean-css
+echo -e "\n---- CREATE ALIAS ----"
+sudo ln -s / usr / bin / nodejs / usr / bin / nod
+
+
+
+#--------------------------------------------------
 # Install ODOO
 #--------------------------------------------------
 echo -e "\n==== Installing ODOO Server ===="
