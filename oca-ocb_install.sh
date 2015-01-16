@@ -1,20 +1,13 @@
 #!/bin/bash
 ################################################################################
-# Script for Installation: ODOO Saas4/Trunk server on Ubuntu 14.04 LTS
-# Author: André Schenkels, ICTSTUDIO 2014
+# Script for Installation: ODOO v8 OCA-OCB server on Ubuntu 14.04 LTS
+# Author: François Dhommeaux, Ubic Informatique 2015
 #-------------------------------------------------------------------------------
 #  
-# This script will install ODOO Server on
-# clean Ubuntu 14.04 Server
+# This script will install ODOO OCA-OCB Server on
+# DOCKER  Ubuntu 14.04 Server : docker pull ocaimages/oca-ubuntu-base
 #-------------------------------------------------------------------------------
-# USAGE:
-#
-# odoo-install
-#
-# EXAMPLE:
-# ./odoo-install 
-#
-################################################################################
+
  
 ##fixed parameters
 #openerp
