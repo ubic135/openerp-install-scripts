@@ -89,8 +89,7 @@ sudo ln -s /usr/bin/nodejs /usr/bin/nod
 # Install ODOO
 #--------------------------------------------------
 echo -e "\n==== Installing ODOO Server OCA-OCB ===="
-# V 8 UNCOMMENT BEFORE LAUNCH sudo git clone --branch $OE_VERSION https://www.github.com/odoo/odoo $OE_HOME_EXT/
-sudo git clone --branch $OE_VERSION https://github.com/OCA/OCB $OE_HOME_EXT/
+sudo git clone --branch $OE_VERSION https://www.github.com/odoo/odoo $OE_HOME_EXT/
 echo -e "\n---- Create custom module directory ----"
 sudo su $OE_USER -c "mkdir $OE_HOME/custom"
 sudo su $OE_USER -c "mkdir $OE_HOME/custom/addons"
