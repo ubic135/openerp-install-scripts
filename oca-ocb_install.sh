@@ -67,7 +67,7 @@ sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 #  Installing basic OS package
 
 echo -e "\n---- INSTALL NPM ----"
-sudo apt-get install npm
+sudo apt-get install npm -y
 echo -e "\n---- INSTALL NODEJS ----"
 sudo apt-get install  nodejs -y
 echo -e "\n---- INSTALL LESS-PLUGIN-CLEAN-CSS ----"
