@@ -64,7 +64,6 @@ sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 # Install Dependencies / Themes Bootstrap
 #--------------------------------------------------
 
-#  Installing basic OS package
 
 echo -e "\n---- INSTALL NPM ----"
 sudo apt-get install npm -y
@@ -73,7 +72,7 @@ sudo apt-get install  nodejs -y
 echo -e "\n---- INSTALL LESS-PLUGIN-CLEAN-CSS ----"
 sudo npm install -g less less-plugin-clean-css
 echo -e "\n---- CREATE ALIAS ----"
-sudo mkdir /usr/bin/nod
+
 sudo ln -s /usr/bin/nodejs /usr/bin/nod
 
 
