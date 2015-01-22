@@ -52,6 +52,12 @@ sudo apt-get install python-dateutil python-feedparser python-ldap python-libxsl
 	
 echo -e "\n---- Install python libraries ----"
 sudo pip install gdata
+
+echo -e "\n---- Install wkhtml and place on correct place for ODOO 8 ----"
+sudo wget http://downloads.sourceforge.net/project/wkhtmltopdf/archive/0.12.1/wkhtmltox-0.12.1_linux-trusty-amd64.deb
+sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
+sudo cp /usr/local/bin/wkhtmltopdf /usr/bin
+sudo cp /usr/local/bin/wkhtmltoimage /usr/bin
 	
 echo -e "\n---- Create ODOO system user ----"
 sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'ODOO' --group $OE_USER
@@ -59,22 +65,6 @@ sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'ODOO' -
 echo -e "\n---- Create Log directory ----"
 sudo mkdir /var/log/$OE_USER
 sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
-
-#--------------------------------------------------
-# Install Dependencies / Themes Bootstrap
-#--------------------------------------------------
-
-
-echo -e "\n---- INSTALL NPM ----"
-sudo apt-get install npm -y
-echo -e "\n---- INSTALL NODEJS ----"
-sudo apt-get install  nodejs -y
-echo -e "\n---- INSTALL LESS-PLUGIN-CLEAN-CSS ----"
-sudo npm install -g less less-plugin-clean-css
-echo -e "\n---- CREATE ALIAS ----"
-
-sudo ln -s /usr/bin/nodejs /usr/bin/nod
-
 
 
 #--------------------------------------------------
