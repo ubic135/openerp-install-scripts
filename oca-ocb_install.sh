@@ -69,8 +69,6 @@ sudo apt-get install -y nodejs
 sudo ln /usr/bin/nodejs /usr/bin/node
 sudo curl -L https://npmjs.org/install.sh | sh
 sudo npm install -g less less-plugin-clean-css
-sudo cd //
-sudo cd OE_HOME/custom/addons
 sudo wget http://nightly.odoo.com/themes/theme_clean.zip
 unzip theme_clean.zip
 
