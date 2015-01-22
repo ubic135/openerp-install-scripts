@@ -58,6 +58,23 @@ sudo wget http://downloads.sourceforge.net/project/wkhtmltopdf/archive/0.12.1/wk
 sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
 sudo cp /usr/local/bin/wkhtmltopdf /usr/bin
 sudo cp /usr/local/bin/wkhtmltoimage /usr/bin
+
+
+#--------------------------------------------------
+# Install Dependencies / Themes Bootstrap
+#--------------------------------------------------
+
+echo -e "\n---- Install Bootstrap dependencies for ODOO 8 ----"
+sudo apt-get install -y nodejs
+sudo ln /usr/bin/nodejs /usr/bin/node
+sudo curl -L https://npmjs.org/install.sh | sh
+sudo npm install -g less less-plugin-clean-css
+sudo cd $OE_HOME/custom/addons
+sudo wget http://nightly.odoo.com/themes/theme_clean.zip
+unzip theme_clean.zip
+
+
+
 	
 echo -e "\n---- Create ODOO system user ----"
 sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'ODOO' --group $OE_USER
