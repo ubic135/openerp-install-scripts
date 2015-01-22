@@ -63,10 +63,10 @@ sudo cp /usr/local/bin/wkhtmltoimage /usr/bin
 #--------------------------------------------------
 # Install Dependencies / Themes Bootstrap
 #--------------------------------------------------
-apt-get install -y nodejs
-ln /usr/bin/nodejs /usr/bin/node
-curl -L https://npmjs.org/install.sh | sh
-npm install -g less less-plugin-clean-css
+sudo apt-get install -y nodejs
+sudo ln /usr/bin/nodejs /usr/bin/node
+sudo curl -L https://npmjs.org/install.sh | sh
+sudo npm install -g less less-plugin-clean-css
 
 
 
