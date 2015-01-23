@@ -69,8 +69,9 @@ sudo apt-get install -y nodejs
 sudo ln /usr/bin/nodejs /usr/bin/node
 sudo curl -L https://npmjs.org/install.sh | sh
 sudo npm install -g less less-plugin-clean-css
-sudo cd $OE_HOME/custom/addons
+
 sudo wget http://nightly.odoo.com/themes/theme_clean.zip
+sudo mv theme_clean.zip opt/odoo/custom/addons
 unzip theme_clean.zip
 
 
@@ -195,5 +196,10 @@ sudo chown root: /etc/init.d/$OE_CONFIG
 
 echo -e "* Start ODOO on Startup"
 sudo update-rc.d $OE_CONFIG defaults
+
+echo -e "* Install clean"
+sudo wget http://nightly.odoo.com/themes/theme_clean.zip
+sudo mv theme_clean.zip opt/odoo/custom/addons
+unzip opt/odoo/custom/addons/theme_clean.zip
  
 echo "Done! The ODOO server can be started with /etc/init.d/$OE_CONFIG"
