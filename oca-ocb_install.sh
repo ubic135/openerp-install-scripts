@@ -70,13 +70,6 @@ sudo ln /usr/bin/nodejs /usr/bin/node
 sudo curl -L https://npmjs.org/install.sh | sh
 sudo npm install -g less less-plugin-clean-css
 
-sudo wget http://nightly.odoo.com/themes/theme_clean.zip
-sudo mv theme_clean.zip opt/odoo/custom/addons
-unzip theme_clean.zip
-
-
-
-	
 echo -e "\n---- Create ODOO system user ----"
 sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'ODOO' --group $OE_USER
 
