@@ -191,6 +191,8 @@ echo -e "* Start ODOO on Startup"
 sudo update-rc.d $OE_CONFIG defaults
 
 echo -e "* Install clean"
+cd //
+cd $OE_HOME/custom/addons
 sudo wget http://nightly.odoo.com/themes/theme_clean.zip
 sudo mv theme_clean.zip opt/odoo/custom/addons
 unzip opt/odoo/custom/addons/theme_clean.zip
