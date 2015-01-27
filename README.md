@@ -1,4 +1,4 @@
-openerp-install-scripts
+odoo-install-scripts
 =======================
 
-OpenERP Install Scripts
+Odoo Install Scripts version OCB
