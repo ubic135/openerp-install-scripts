@@ -67,7 +67,8 @@ sudo cp /usr/local/bin/wkhtmltoimage /usr/bin
 echo -e "\n---- Install Bootstrap dependencies for ODOO 8 ----"
 sudo apt-get install -y nodejs
 sudo ln /usr/bin/nodejs /usr/bin/node
-sudo curl -L https://npmjs.org/install.sh | sh
+sudo apt-get install - y npm
+sudo npm install npm -g
 sudo npm install -g less less-plugin-clean-css
 
 echo -e "\n---- Create ODOO system user ----"
@@ -194,7 +195,7 @@ echo -e "* Install clean"
 cd //
 cd $OE_HOME/custom/addons
 sudo wget http://nightly.odoo.com/themes/theme_clean.zip
-sudo mv theme_clean.zip opt/odoo/custom/addons
+sudo apt-get install unzip
 unzip opt/odoo/custom/addons/theme_clean.zip
  
 echo "Done! The ODOO server can be started with /etc/init.d/$OE_CONFIG"
