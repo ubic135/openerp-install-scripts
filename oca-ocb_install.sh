@@ -191,11 +191,6 @@ sudo chown root: /etc/init.d/$OE_CONFIG
 echo -e "* Start ODOO on Startup"
 sudo update-rc.d $OE_CONFIG defaults
 
-echo -e "* Install clean"
-cd //
-cd $OE_HOME/custom/addons
-sudo wget http://nightly.odoo.com/themes/theme_clean.zip
-sudo apt-get install unzip
-unzip opt/odoo/custom/addons/theme_clean.zip
+
  
 echo "Done! The ODOO server can be started with /etc/init.d/$OE_CONFIG"
