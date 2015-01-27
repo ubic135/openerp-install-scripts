@@ -2,6 +2,7 @@
 ################################################################################
 # Script for Installation: ODOO v8 OCA-OCB server on Ubuntu 14.04 LTS
 # Author: François Dhommeaux, Ubic Informatique 2015
+# Fork from aschenkels-ictstudio/openerp-install-scripts
 #-------------------------------------------------------------------------------
 #  
 # This script will install ODOO OCA-OCB Server on
@@ -71,6 +72,11 @@ sudo apt-get install - y npm
 sudo npm install npm -g
 sudo npm install -g less less-plugin-clean-css
 
+
+#--------------------------------------------------
+# Install ODOO
+#--------------------------------------------------
+
 echo -e "\n---- Create ODOO system user ----"
 sudo adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'ODOO' --group $OE_USER
 
@@ -78,10 +84,6 @@ echo -e "\n---- Create Log directory ----"
 sudo mkdir /var/log/$OE_USER
 sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 
-
-#--------------------------------------------------
-# Install ODOO
-#--------------------------------------------------
 echo -e "\n==== Installing ODOO Server OCA-OCB ===="
 sudo git clone --branch $OE_VERSION https://github.com/OCA/OCB $OE_HOME_EXT/
 echo -e "\n---- Create custom module directory ----"
