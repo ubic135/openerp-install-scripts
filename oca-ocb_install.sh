@@ -68,7 +68,7 @@ sudo cp /usr/local/bin/wkhtmltoimage /usr/bin
 echo -e "\n---- Install Bootstrap dependencies for ODOO 8 ----"
 sudo apt-get install -y nodejs
 sudo ln /usr/bin/nodejs /usr/bin/node
-sudo apt-get install - y npm
+sudo apt-get install -y npm
 sudo npm install npm -g
 sudo npm install -g less less-plugin-clean-css
 
