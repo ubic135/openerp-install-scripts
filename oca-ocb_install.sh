@@ -193,6 +193,15 @@ sudo chown root: /etc/init.d/$OE_CONFIG
 echo -e "* Start ODOO on Startup"
 sudo update-rc.d $OE_CONFIG defaults
 
+echo -e "* Install Bootswatch theme"
+cd //
+cd $OE_HOME/custom/addons
+sudo wget https://apps.openerp.com/loempia/download/theme_bootswatch/master.1.0/2YH78cfQkBvSDP0EBg1oKr.zip?deps
+sudo apt-get install unzip
+cd //
+cd /opt/odoo/custom/addons
+unzip theme_bootswatch-master.1.0.zip
+
 
  
 echo "Done! The ODOO server can be started with /etc/init.d/$OE_CONFIG"
