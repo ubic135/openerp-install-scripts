@@ -23,7 +23,7 @@ OE_HOME="/opt/$OE_USER"
 OE_HOME_EXT="/opt/$OE_USER/$OE_USER-server"
 
 #Enter version for checkout "8.0" for version 8.0, "7.0 (version 7), saas-4, saas-5 (opendays version) and "master" for trunk
-OE_VERSION="8.0"
+OE_VERSION="master"
 
 #set the superadmin password
 OE_SUPERADMIN="superadminpassword"
@@ -88,7 +88,7 @@ sudo ln -s /usr/bin/nodejs /usr/bin/nod
 #--------------------------------------------------
 # Install ODOO
 #--------------------------------------------------
-echo -e "\n==== Installing ODOO Server OCA-OCB ===="
+echo -e "\n==== Installing ODOO ===="
 sudo git clone --branch $OE_VERSION https://www.github.com/odoo/odoo $OE_HOME_EXT/
 echo -e "\n---- Create custom module directory ----"
 sudo su $OE_USER -c "mkdir $OE_HOME/custom"
