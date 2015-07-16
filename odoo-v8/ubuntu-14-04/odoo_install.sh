@@ -82,7 +82,7 @@ sudo npm install -g less less-plugin-clean-css
 echo -e "\n---- CREATE ALIAS ----"
 sudo mkdir /usr/bin/nod
 sudo ln -s /usr/bin/nodejs /usr/bin/nod
-
+sudo apt-get install node-less
 
 
 #--------------------------------------------------
