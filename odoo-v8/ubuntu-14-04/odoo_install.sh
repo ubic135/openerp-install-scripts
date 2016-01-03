@@ -73,6 +73,9 @@ sudo chown $OE_USER:$OE_USER /var/log/$OE_USER
 
 #  Installing basic OS package
 
+echo -e "\n---- INSTALL node-clean-css & node-less ----"
+sudo apt-get install node-clean-css
+sudo apt-get install node-less
 echo -e "\n---- INSTALL NPM ----"
 sudo apt-get install npm
 echo -e "\n---- INSTALL NODEJS ----"
@@ -82,7 +85,7 @@ sudo npm install -g less less-plugin-clean-css
 echo -e "\n---- CREATE ALIAS ----"
 sudo mkdir /usr/bin/nod
 sudo ln -s /usr/bin/nodejs /usr/bin/nod
-sudo apt-get install node-less
+
 
 
 #--------------------------------------------------
