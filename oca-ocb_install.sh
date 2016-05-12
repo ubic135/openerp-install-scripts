@@ -205,5 +205,9 @@ unzip theme_bootswatch-master.1.0.zip
 echo -e "* Install Import bank ofx"
  sudo git clone --branch 8.0 https://github.com/OCA/bank-statement-import.git /opt/odoo/gt-oca-bank-statement-import
  sudo pip install ofxparse
+ 
+ echo -e "* Install SFTP"
+ 
+ sudo pip install psftp
 
 echo "Done! The ODOO server can be started with /etc/init.d/$OE_CONFIG"
