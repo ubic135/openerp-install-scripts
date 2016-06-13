@@ -60,6 +60,9 @@ sudo dpkg -i wkhtmltox-0.12.1_linux-trusty-amd64.deb
 sudo cp /usr/local/bin/wkhtmltopdf /usr/bin
 sudo cp /usr/local/bin/wkhtmltoimage /usr/bin
 
+echo -e "\n---- Install pysftp pour autobackup ----"
+sudo pip install pysftp
+
 
 #--------------------------------------------------
 # Install Dependencies / Themes Bootstrap
@@ -193,18 +196,23 @@ sudo chown root: /etc/init.d/$OE_CONFIG
 echo -e "* Start ODOO on Startup"
 sudo update-rc.d $OE_CONFIG defaults
 
-echo -e "* Install Bootswatch theme"
-cd //
-cd $OE_HOME/custom/addons
-sudo wget https://apps.openerp.com/loempia/download/theme_bootswatch/master.1.0/2YH78cfQkBvSDP0EBg1oKr.zip?deps
-sudo apt-get install unzip
-cd //
-cd /opt/odoo/custom/addons
-unzip theme_bootswatch-master.1.0.zip
 
-echo -e "* Install Import bank ofx"
- sudo git clone --branch 8.0 https://github.com/OCA/bank-statement-import.git /opt/odoo/gt-oca-bank-statement-import
+
+echo -e "* Install dependance bank ofx"
+ 
  sudo pip install ofxparse
+ 
+ echo -e "* Attribution des droits dossier addons pour user ubuntu aws ec2"
+ 
+ sudo usermod -a -G odoo ubuntu
+
+ sudo chgrp -R odoo /opt/odoo/custom/addons/
+
+ sudo chmod -R g+w /opt/odoo/custom/addons/
+
+ sudo find /opt/odoo/custom/addons/ -type d -exec chmod 2775 {} \;
+
+ sudo find /opt/odoo/custom/addons/ -type f -exec chmod ug+rw {} \;
 
 
 echo "Done! The ODOO server can be started with /etc/init.d/$OE_CONFIG"
